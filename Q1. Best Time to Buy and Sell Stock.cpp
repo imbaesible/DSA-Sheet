@@ -23,6 +23,9 @@
 // 	}
 // }
 
+// Time Complexity : O(N^2)
+// Space Complexity : O(1)
+
 //Approach 2 :
 
 // We can create a variable to store minimum buying value and them gradually check for max profit from the buying day (which was minimum) and store the value in profit variable and then later return the maximum profit.
@@ -40,3 +43,6 @@ int maxProfit(vector<int>& arr) {
     
     return maxprofit;
 }
+
+// Time Complexity : O(N)
+// Space Complexity : O(1)
