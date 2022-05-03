@@ -16,12 +16,12 @@
 
 // We can use to loops and check the difference of each day and store it in a variable and then return the max profit.
 
-// for(int i = 0; i<arr.length; i++){
-// 	for(int j=i+1; j<arr.length; j++){
-// 		prof = a[j] - a[i];
-// 		maxProf = max(prof, maxProf);
-// 	}
-// }
+for(int i = 0; i<arr.length; i++){
+	for(int j=i+1; j<arr.length; j++){
+		prof = a[j] - a[i];
+		maxProf = max(prof, maxProf);
+	}
+}
 
 // Time Complexity : O(N^2)
 // Space Complexity : O(1)
