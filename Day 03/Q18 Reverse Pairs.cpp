@@ -1,9 +1,11 @@
 //Q18 Count Reverse Pairs (493 leetcode HARD) 
 
-//
+//Given an integer array nums, return the number of reverse pairs in the array.
 
+// A reverse pair is a pair (i, j) where 0 <= i < j < nums.length and nums[i] > 2 * nums[j].
 
-
+// Input: nums = [1,3,2,3,1]
+// Output: 2
 
 
 //Approach 1 : Brute-Force Solution (nested loop)
@@ -42,19 +44,19 @@ int Merge(vector <int> &nums, int low, int mid, int high){
         int total = 0;
     int i=low, j = mid+1;
     
-    while(i<=mid && j<=high){
-        while(i<=mid && nums[i]<=2ll*nums[j]) i++;
+//     while(i<=mid && j<=high){
+//         while(i<=mid && nums[i]<=2ll*nums[j]) i++;
         
-        total += mid-i+1;
-        j++;
-    }
+//         total += mid-i+1;
+//         j++;
+//     }
 
- //    for(int i=low; i<=mid; i++){
-	// 	while(j<=high && nums[i] > 2 LL * nums[j]){
-	// 		j++;
-	// 	}
-	// 	total += (j - (mid+1));
-	// }
+ 	for(int i=low; i<=mid; i++){
+		while(j<=high && nums[i] > 2LL * nums[j]){
+			j++;
+		}
+		total += (j - (mid+1));
+	}
 
     vector<int> t;
     int left = low, right = mid + 1;
